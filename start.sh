@@ -11,4 +11,6 @@ EOF
     echo "http://CHANGE_THIS_TO_SERVER_IP:8000/ttvplaylist/ttvplaylist.m3u"
 fi
 
+sed -i 's/vlcuse = False/vlcuse = True/' /home/tv/aceproxy-master/aceconfig.py
+
 exec /usr/bin/supervisord

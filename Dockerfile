@@ -27,6 +27,6 @@ RUN cd /tmp/ && unzip master.zip -d /home/tv/
 
 RUN echo 'root:password' |chpasswd
 
-EXPOSE 22 8000
+EXPOSE 22 8000 62062
 
 ENTRYPOINT ["/start.sh"]
