@@ -22,7 +22,7 @@ ADD start.sh /start.sh
 
 RUN chmod +x /start.sh
 
-RUN cd /tmp/ && wget -q https://github.com/ikatson/aceproxy/archive/master.zip
+RUN cd /tmp/ && wget -q https://github.com/ikatson/aceproxy/archive/master.zip?v=2 -O master.zip
 RUN cd /tmp/ && unzip master.zip -d /home/tv/
 
 RUN echo 'root:password' |chpasswd
