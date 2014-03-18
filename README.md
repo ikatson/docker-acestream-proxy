@@ -3,7 +3,11 @@ Docker-TTV
 
 A docker image to run aceengine + aceproxy, e.g. to watch Torrent-TV.ru.
 
-TorrentTV's "local-ts-proxy" thing sucks, but aceproxy is better, simpler, and can also handle other sites.
+As a result, you will be able to watch AceStream live content without having AcePlayer and other dependencies installed locally.
+
+Perfect for XBMC (even on Raspberry PI), Mac OSX, where AceStream in unavailable, or hard/expensive to launch.
+
+TorrentTV's "local-ts-proxy" thing, which does the same, sucks cause it's windows-only, very buggy, and vendor locked-in. Aceproxy works better, is simpler, and can also handle other acestream content.
 
 
 Installation
