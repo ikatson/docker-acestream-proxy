@@ -17,7 +17,7 @@ RUN mkdir -p /var/log/supervisor
 
 RUN adduser --disabled-password --gecos "" tv
 
-RUN cd /tmp/ && wget -q https://github.com/ikatson/aceproxy/archive/master.zip?v=3 -O master.zip
+RUN cd /tmp/ && wget -q https://github.com/ikatson/aceproxy/archive/master.zip?v=4 -O master.zip
 RUN cd /tmp/ && unzip master.zip -d /home/tv/
 
 RUN echo 'root:password' |chpasswd
