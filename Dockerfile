@@ -17,15 +17,15 @@ RUN mkdir -p /var/log/supervisor
 
 RUN adduser --disabled-password --gecos "" tv
 
-ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-ADD start.sh /start.sh
-
-RUN chmod +x /start.sh
-
 RUN cd /tmp/ && wget -q https://github.com/ikatson/aceproxy/archive/master.zip?v=2 -O master.zip
 RUN cd /tmp/ && unzip master.zip -d /home/tv/
 
 RUN echo 'root:password' |chpasswd
+
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD start.sh /start.sh
+
+RUN chmod +x /start.sh
 
 EXPOSE 22 8000 62062
 
