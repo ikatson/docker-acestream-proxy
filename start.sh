@@ -12,5 +12,7 @@ EOF
 fi
 
 sed -i 's/vlcuse = False/vlcuse = True/' /home/tv/aceproxy-master/aceconfig.py
+sed -i 's/videoobey = True/videoobey = False/' /home/tv/aceproxy-master/aceconfig.py
+sed -i 's/videopausedelay = .*/videopausedelay = 0/' /home/tv/aceproxy-master/aceconfig.py
 
 exec /usr/bin/supervisord
