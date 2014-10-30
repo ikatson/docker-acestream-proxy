@@ -5,6 +5,7 @@ TTV_URL="$1"
 if [[ -n "$TTV_URL" ]]; then
     cat > /home/tv/aceproxy-master/plugins/config/torrenttv.py << EOF
 url = '$1'
+updateevery = 0
 EOF
     echo "Paste this URL into your player"
     echo "http://CHANGE_THIS_TO_SERVER_IP:8000/torrenttv/torrenttv.m3u"
