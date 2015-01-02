@@ -1,6 +1,7 @@
 #!/bin/bash
 
 TTV_URL="$1"
+HOST_IP="$(hostname -I | sed 's/ *$//')"
 
 if [[ -n "$TTV_URL" ]]; then
     cat > /home/tv/aceproxy-master/plugins/config/torrenttv.py << EOF
@@ -8,7 +9,7 @@ url = '$1'
 updateevery = 0
 EOF
     echo "Paste this URL into your player"
-    echo "http://CHANGE_THIS_TO_SERVER_IP:8000/torrenttv/torrenttv.m3u"
+    echo "http://$HOST_IP:8000/torrenttv/torrenttv.m3u"
 fi
 
 sed -i 's/vlcuse = False/vlcuse = True/' /home/tv/aceproxy-master/aceconfig.py
