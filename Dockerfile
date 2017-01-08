@@ -10,6 +10,8 @@ RUN echo 'deb http://repo.acestream.org/ubuntu/ precise main' > /etc/apt/sources
 RUN wget -q -O - http://repo.acestream.org/keys/acestream.public.key | apt-key add -
 RUN DEBIAN_FRONTEND=noninteractive apt-get update -y
 
+RUN apt-get install python-gevent python2-psutil python-psutil
+
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y acestream-engine vlc-nox python-gevent
 
 RUN mkdir -p /var/run/sshd
